@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bone Jus Buah - Jus Segar dan Sehat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header dengan navigasi utama -->
+  <header>
+    <nav aria-label="Navigasi utama Bone Jus Buah">
+      <ul>
+        <li><a href="#hero" tabindex="1">Beranda</a></li>
+        <li><a href="#menu" tabindex="2">Menu</a></li>
+        <li><a href="#testimoni" tabindex="3">Testimoni</a></li>
+        <li><a href="#about" tabindex="4">Tentang Kami</a></li>
+        <li><a href="#kontak" tabindex="5">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section" aria-label="Bagian hero Bone Jus Buah">
+    <div class="hero-content">
+      <h1>Segarnya Jus Buah Alami dari Bone</h1>
+      <p>Rasakan kesegaran dan manfaat buah terbaik dalam setiap tegukan.</p>
+      <a href="#menu" class="btn-primary" tabindex="6">Pesan Sekarang</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-juice.webp" alt="Segelas jus buah segar dengan buah-buahan segar di latar belakang" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <main>
+    <section id="menu" aria-label="Daftar menu jus buah Bone Jus Buah">
+      <h2>Menu Jus Buah Kami</h2>
+      <!-- Filter kategori -->
+      <div class="filter-menu" role="radiogroup" aria-label="Filter kategori jus buah">
+        <button role="radio" aria-checked="true" tabindex="7" data-category="all">Semua</button>
+        <button role="radio" aria-checked="false" tabindex="8" data-category="segar">Segar</button>
+        <button role="radio" aria-checked="false" tabindex="9" data-category="detox">Detox</button>
+        <button role="radio" aria-checked="false" tabindex="10" data-category="energi">Energi</button>
+      </div>
+      <div class="menu-grid">
+        <!-- Contoh kartu produk -->
+        <article class="menu-item" data-category="segar" tabindex="11" aria-label="Jus Jeruk Segar">
+          <img src="images/jeruk.webp" alt="Jus jeruk segar dalam gelas kaca" loading="lazy" />
+          <h3>Jus Jeruk Segar</h3>
+          <p>Vitamin C tinggi, menyegarkan dan menyehatkan.</p>
+          <button class="info-btn" aria-expanded="false" aria-controls="info-jeruk" tabindex="12">Info Nutrisi</button>
+          <div id="info-jeruk" class="nutrisi-info" hidden>
+            <ul>
+              <li>Kalori: 80 kcal</li>
+              <li>Vitamin C: 70 mg</li>
+              <li>Gula alami: 15g</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="detox" tabindex="13" aria-label="Jus Detox Hijau">
+          <img src="images/detox-hijau.webp" alt="Jus detox hijau dengan daun dan sayuran segar" loading="lazy" />
+          <h3>Jus Detox Hijau</h3>
+          <p>Membantu detoksifikasi tubuh dengan bahan alami.</p>
+          <button class="info-btn" aria-expanded="false" aria-controls="info-detox" tabindex="14">Info Nutrisi</button>
+          <div id="info-detox" class="nutrisi-info" hidden>
+            <ul>
+              <li>Kalori: 60 kcal</li>
+              <li>Serat: 5g</li>
+              <li>Antioksidan tinggi</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="energi" tabindex="15" aria-label="Jus Energi Tropis">
+          <img src="images/energi-tropis.webp" alt="Jus energi tropis dengan campuran buah nanas dan mangga" loading="lazy" />
+          <h3>Jus Energi Tropis</h3>
+          <p>Meningkatkan stamina dan energi sepanjang hari.</p>
+          <button class="info-btn" aria-expanded="false" aria-controls="info-energi" tabindex="16">Info Nutrisi</button>
+          <div id="info-energi" class="nutrisi-info" hidden>
+            <ul>
+              <li>Kalori: 120 kcal</li>
+              <li>Vitamin B kompleks</li>
+              <li>Elektrolit alami</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" aria-label="Testimoni pelanggan Bone Jus Buah">
+      <h2>Apa Kata Pelanggan?</h2>
+      <div class="testimoni-slider" tabindex="17">
+        <blockquote>
+          <p>"Jusnya sangat segar dan membuat saya lebih berenergi setiap hari!"</p>
+          <footer>- Rina, Mahasiswa Desain</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Desain website ini sangat inspiratif dan mudah digunakan untuk usaha saya."</p>
+          <footer>- Budi, Pengusaha UMKM</footer>
+        </blockquote>
+        <blockquote>
+          <p>"Teknik animasi dan interaksi yang digunakan sangat profesional dan modern."</p>
+          <footer>- Sari, Web Designer Profesional</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="about" aria-label="Tentang Bone Jus Buah">
+      <h2>Tentang Kami</h2>
+      <p>Bone Jus Buah berdiri dengan visi menghadirkan jus buah segar dan sehat yang menginspirasi gaya hidup modern dan sehat.</p>
+      <!-- Tempat untuk animasi atau ilustrasi -->
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" aria-label="Kontak dan lokasi Bone Jus Buah">
+      <h2>Hubungi Kami</h2>
+      <address>
+        <p>Jl. Buah Segar No. 10, Bone, Sulawesi Selatan</p>
+        <p>Email: info@bonejusbuah.com</p>
+        <p>Telepon: +62 812 3456 xxxx</p>
+      </address>
+      <div class="social-media">
+        <a href="#" aria-label="Instagram Bone Jus Buah" tabindex="18"><img src="images/instagram.webp" alt="Ikon Instagram" /></a>
+        <a href="#" aria-label="Facebook Bone Jus Buah" tabindex="19"><img src="images/facebook.webp" alt="Ikon Facebook" /></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

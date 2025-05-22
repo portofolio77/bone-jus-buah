@@ -1,0 +1,316 @@
+/* style.css untuk Bone Jus Buah */
+
+:root {
+  --primary-color: #FF6F61;
+  --secondary-color: #2C3E50;
+  --accent-color: #A7C7E7;
+  --font-family: 'Poppins', sans-serif;
+  --base-font-size: 16px;
+  --spacing-unit: 1rem;
+}
+
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  color: var(--secondary-color);
+  background: linear-gradient(135deg, #FF6F61, #A7C7E7);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navigasi utama */
+header {
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-unit);
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: var(--primary-color);
+  outline: none;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255,111,97,0.4);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-color);
+  color: white;
+  outline: none;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  z-index: 2;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Filter Menu */
+.filter-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-menu button {
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-menu button[aria-checked="true"],
+.filter-menu button:hover,
+.filter-menu button:focus {
+  background-color: var(--primary-color);
+  color: white;
+  outline: none;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 4rem;
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.menu-item:hover,
+.menu-item:focus-within {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.info-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.info-btn:hover,
+.info-btn:focus {
+  background-color: #e65b50;
+  outline: none;
+}
+
+.nutrisi-info {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Testimoni Section */
+.testimoni-slider {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimoni-slider blockquote {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.testimoni-slider blockquote footer {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Tentang Kami Section */
+#about {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+/* Kontak Section */
+#kontak {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+#kontak address p {
+  margin-bottom: 0.5rem;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-media a:hover,
+.social-media a:focus {
+  transform: scale(1.2);
+  outline: none;
+}
+
+.social-media img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 2rem;
+  }
+}
+
+/* Animasi dan Transisi */
+.menu-item,
+.testimoni-slider blockquote {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
